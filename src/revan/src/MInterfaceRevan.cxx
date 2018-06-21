@@ -129,7 +129,7 @@ bool MInterfaceRevan::ParseCommandLine(int argc, char** argv)
   Usage<<"             Analyze the evta-file given with the -f option, otherwise the file in the configuration file"<<endl;
   Usage<<"      -e --energy-before:"<<endl;
   Usage<<"             Show the spectrum before the analysis"<<endl;
-  Usage<<"      -t --trigger-statistics:"
+  Usage<<"      -t --trigger-statistics:"<<endl;
   Usage<<"             Calculate the trigger statistics"<<endl;
   Usage<<endl;
   Usage<<"      -d --debug:"<<endl;
