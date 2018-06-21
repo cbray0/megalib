@@ -120,6 +120,8 @@ bool MInterfaceGeomega::ParseCommandLine(int argc, char** argv)
   Usage<<"             Only show this volume and all other volumes given with this option"<<endl;
   Usage<<"      -v --verbosity <integer>:"<<endl;
   Usage<<"             The higher the integer, the higher the verbosity..."<<endl;
+  Usage<<"      --check-geometry:"<<endl;
+  Usage<<"             Performs geometry check on given file"<<endl;
   Usage<<"      -h --help:"<<endl;
   Usage<<"             You know the answer..."<<endl;
   Usage<<endl;
@@ -262,6 +264,10 @@ bool MInterfaceGeomega::ParseCommandLine(int argc, char** argv)
        cout<<"Command-line parser: Creating cross section files"<<endl;
        gROOT->SetBatch(true);
        CreateCrossSections();
+       return false;
+     } else if (Option == "--check-geometry") {
+       gROOT->SetBatch(true);
+       TestIntersections();
        return false;
      }
   }
