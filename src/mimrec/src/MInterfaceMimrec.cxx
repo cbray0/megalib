@@ -262,7 +262,7 @@ bool MInterfaceMimrec::ParseCommandLine(int argc, char** argv)
       m_OutputFileName = argv[++i];
       int j=0;
       while(!test_exist((string)m_OutputFileName+".run"+to_string(j))){
-          j++
+          j++;
       }
       m_OutputFileName+=".run"+to_string(j);
       cout<<"Command-line parser: Use this output file name "<<m_OutputFileName<<endl;
